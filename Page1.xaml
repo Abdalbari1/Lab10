@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Lab10.Page1"
+             Title="Page1">
+
+    <StackLayout >
+            <CollectionView x:Name="collView" SelectionChanged="OnCollectionViewSelectionChanged" SelectionMode="Single" HeightRequest="120"   VerticalOptions="StartAndExpand" HorizontalOptions="Center"  >
+                <CollectionView.ItemsLayout>
+                    <LinearItemsLayout Orientation="Horizontal"   />
+                </CollectionView.ItemsLayout>
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Padding="5" Grid.RowDefinitions ="70 , 35"  Grid.ColumnDefinitions = "90" >
+                            <Border  HeightRequest="60"  WidthRequest="60" StrokeShape="RoundRectangle 30">
+                                <Image  Source="{Binding ImageUrl}" Aspect="AspectFill"  HeightRequest="60" WidthRequest="60" />
+                            </Border>
+                            <Label Grid.Row="1"  Text="{Binding cataTitle}" FontAttributes="Italic" VerticalOptions="Center" />
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        
+
+<StackLayout Margin="0,10,0,0">
+            
+            <ListView  HasUnevenRows="true" x:Name="myListView" SelectionMode="Single" ItemSelected="myListView_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image Source="{Binding ImageUrl}" HeightRequest="60"    WidthRequest="60" />
+                                <Label Text="{Binding Title}" />
+                                <Label  Text="{Binding Price}"  />
+                                <Image Source="addcart.png" HeightRequest="40" WidthRequest="40" />
+                            </StackLayout>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+    </StackLayout>
+    </StackLayout>
+
+</ContentPage>
