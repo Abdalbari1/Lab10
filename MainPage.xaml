@@ -5,7 +5,7 @@
 
     <StackLayout Padding="10">
         <Image Source="book1.jpg" WidthRequest="100" HeightRequest="100" />
-        <Label Text=" Peruzal" HorizontalOptions="Center" TextColor="Blue" />
+        <Label Text=" Peruzal" HorizontalOptions="Center" TextColor="Green" />
         <Entry x:Name="txt1" Placeholder="Username" Keyboard="Email" />
         <Entry x:Name="txt2" Placeholder="Password" IsPassword="true" />
         <StackLayout Orientation="Horizontal">
