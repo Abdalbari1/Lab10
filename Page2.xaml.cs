@@ -51,7 +51,7 @@ public partial class Page2 : ContentPage
         {
             if (book.quant > 0)
             {
-                sql = "insert into  orderline (orderid,itemname,itemquant,itemprice) values ( '" + ordid + "'  ,'" + book.Title + "' ,'" + book.quant + "','" + book.Price + "') ";
+                sql = "insert into  orderline1 (orderid,itemname,itemquant,itemprice) values ( '" + ordid + "'  ,'" + book.Title + "' ,'" + book.quant + "','" + book.Price + "') ";
                 comm = new SqlCommand(sql, con);
                 con.Open();
                 comm.ExecuteNonQuery();
